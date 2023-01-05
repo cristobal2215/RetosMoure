@@ -1,22 +1,22 @@
 def Ordenar(numbers, asc):
     meth_sort = []
 
-    for number in numbers:
+    for i in numbers:
         added = False
 
-        for i in range(len(meth_sort)):
+        for j in range(len(meth_sort)):
             if asc:
-                condition = number < meth_sort[i]
+                condition = i < meth_sort[j]
             else:
-                condition = number > meth_sort[i]
+                condition = i > meth_sort[j]
             
             if condition:
-                meth_sort.insert(i, number)
+                meth_sort.insert(j, i)
                 added = True
                 break
 
         if not added:
-            meth_sort.append(number)
+            meth_sort.append(i)
     
     return meth_sort
 
